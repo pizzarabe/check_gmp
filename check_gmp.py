@@ -993,9 +993,8 @@ def status(version):
                     filter='sort-reverse=id result_hosts_only=1 '
                            'min_cvss_base= min_qod= levels=hmlgd autofp=%s '
                            'notes=0 apply_overrides=%s overrides=%s first=1 rows=-1 '
-                           'delta_states=cgns %s'
+                           'delta_states=cgns host=%s'
                            % (args.autofp, int(args.overrides), int(args.apply_overrides), host))
-
                 # pretty(report.xpath('report/report/filters'))
 
                 im.add_report(last_scan_end, params_used, full_report)
